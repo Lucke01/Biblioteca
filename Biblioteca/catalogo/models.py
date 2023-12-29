@@ -65,7 +65,7 @@ class instancia_juego(models.Model):
     status = models.CharField(max_length = 1, choices = BETA_ACCESS, blank = True, default = 'M', help_text = 'disponibilidad de la beta del juego')
 
     class Meta :
-        ordening =['finalizacion_beta']
+        ordering =['finalizacion_beta']
 
     def __str__(self):
         # objeto del modelo
