@@ -45,3 +45,28 @@ class Marca (models.Model):
         String para representar el Objeto Modelo
         """
         return '%s, %s' % (self.nombre_empresa, self.desarrolladores)
+    
+
+import uuid
+class instancia_juego(models.Model):
+    #representa una copia especifica del juego (puede ser la version prelanzamiento)
+
+    id = models.UUIDField(primary_key = True, default = uuid.uuid4 , help_text = 'ID unico')
+    juego = models.ForeignKey('Juego',on_delete = models.SET_NULL , null = True)
+    finalizacion_beta = models.DateField(null = True, blank = True)
+
+    BETA_ACCESS = (
+        ('M','Mantenimiento'),
+        ('D','Disponible'),
+        ('R','Reservado'),
+
+    )
+
+    status = models.CharField(max_length = 1, choices = BETA_ACCESS, blank = True, default = 'M', help_text = 'disponibilidad de la beta del juego')
+
+    class Meta :
+        ordening =['finalizacion_beta']
+
+    def __str__(self):
+        # objeto del modelo
+        return '%s (%s)' %(self.id, self.juego.titulo)
