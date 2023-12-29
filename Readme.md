@@ -22,4 +22,9 @@ urlpatterns = [
 2.2) luego python manage.py migrate
 
 ///////////////////////////////////  COMMIT -- PROYECTO/APP/ MODELS////////////////////////////
-CAPITULO 3 DEL TUTORIAL
+
+3) Registro de los modelos en catalogo/admin.py
+
+///////////////////// commit -- correccion de errores////////////
+
+4) Creacion de un SUPERUSER
