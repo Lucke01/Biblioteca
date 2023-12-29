@@ -10,7 +10,7 @@ class Genero(models.Model):
         """
         Cadena que representa a la instancia particular del modelo (p.ej: sitio de administracion)
         """
-        return self.name
+        return self.nombre
     
 
 class Juego(models.Model):
