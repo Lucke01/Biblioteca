@@ -48,7 +48,7 @@ class Marca (models.Model):
     
 
 import uuid
-class instancia_juego(models.Model):
+class Instancia_juego(models.Model):
     #representa una copia especifica del juego (puede ser la version prelanzamiento)
 
     id = models.UUIDField(primary_key = True, default = uuid.uuid4 , help_text = 'ID unico')
