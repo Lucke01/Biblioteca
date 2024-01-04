@@ -43,4 +43,4 @@ V) catalogo/Marca/<id> — La vista detallada para la marca específica con un c
 5.1.1 ) creamos en Biblioteca/catalogo/template (guardar las plantillas html)
 5.1.2) configuramos para que django lo vea al template
 
-////////////////////// commit ---- Creacion del Index -----------------/////
+////////////////////// 68e4b87 commit ---- Creacion del Index -----------------/////
