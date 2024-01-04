@@ -28,3 +28,16 @@ urlpatterns = [
 ///////////////////// commit -- correccion de errores////////////
 
 4) Creacion de un SUPERUSER
+//////////////////commit -- 4eb65cc creacion super user y testeo/////////////////
+
+5) Creación de tu página de inicio
+vamos a crear las siguientes vistas:
+
+I) catalogo/ => pagina inicio
+II) catalogo/Juegos => lista de los juegos
+III) catalogo/Marca/ — La lista de todas las marcas
+IV) catalogo/Juego/<id> — La vista detallada para el juego específico con un campo de clave primaria de <id> 
+V) catalogo/Marca/<id> — La vista detallada para la marca específica con un campo de clave primaria llamada <id>
+
+5.1) vamos a laburar agora en Biblioteca/catalogo/urls.py
+5.1.1 ) creamos en Biblioteca/catalogo/template (guardar las plantillas html)

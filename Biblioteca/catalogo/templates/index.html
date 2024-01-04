@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Inicio de Biblioteca</h1>
+
+  <p>Bienvenido a <em>Biblioteca</em>, un tutorial leve de Django .</p>
+
+  <!-- Aca estan los contadores de las views -->
+<h2>Contenido dinamico</h2>
+
+  <p>La biblioteca tiene algunas cuentas record:</p>
+  <ul>
+    <li><strong>Juegos:</strong> {{ num_juego }}</li>
+    <li><strong>Copias:</strong> {{ num_intancia }}</li>
+    <li><strong>Copias disponibles:</strong> {{ num_instancia_disponible }}</li>
+    <li><strong>Marcas:</strong> {{ num_marca }}</li>
+  </ul>
+
+{% endblock %}
+</html>
