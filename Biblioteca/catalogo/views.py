@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import *
+from django.http import Http404
 # Create your views here.
 
 
@@ -39,3 +40,12 @@ class JuegoListView(generic.ListView):
     
 class JuegoDetailView(generic.DetailView):
     model = Juego
+    
+    def juego_detail_list(request,pk):
+        try:
+            juego_id = Juego.objects.get(pk=pk)
+        except Juego.DoesNotExist:
+            raise Http404("el juego que busca no existe")
+        
+        
+        return render(request, 'catalogo/juegos_detalle.html', context={'juego_id':juego_id})
