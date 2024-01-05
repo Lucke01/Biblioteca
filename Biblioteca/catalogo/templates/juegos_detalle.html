@@ -1,0 +1,26 @@
+{% extends "base_generic.html"%}
+
+{% block content %}
+    <h1> titulo :{{ juego.titulo }} </h1>
+
+    <p><strong>Marca:</strong>  <a href ="">{{ juego.marca }} </a></p> <!-- enlace de detalle de la marca aún no definido -->
+    <p><strong>Descripcion: </strong>{{ juego.sumario }} </p>
+    <p><strong>ISBN: </strong>{{ juego.isbn }} </p>
+    <p><strong>Genero: </strong>{{% for genero in juego.genero.all %}} {{genero}} {{% if not forloop.last%}}, {% endif %} {% endfor %} </p>
+
+    <div style ="margin-left: 20px;margin-top: 20px;">
+        <h4> Copias</h4>
+
+        {% for copy in juego.instanciajuego_set.all %}
+        <hr>
+        <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">{{ copy.get_status_display }}</p>
+        {% if copy.status != 'a' %}<p><strong>Pendiente de devolución:</strong> {{copy.due_back}}</p>{% endif %}
+        <p><strong>descargar:</strong> {{copy.imprint}}</p>
+        <p class="text-muted"><strong>Id:</strong> {{copy.id}}</p>
+        {% endfor %}
+        
+
+    
+    </div>
+
+{% endblock %}

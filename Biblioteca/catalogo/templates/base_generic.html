@@ -16,7 +16,7 @@
             {% block sidebar %}
             <ul class = "sidebar-nav">
                 <li><a href ="{% url 'Catalogo:index'%}"> Inicio </a></li>
-                <li><a href = "">Todos los Juegos</a></li>
+                <li><a href = "{% url 'Catalogo:juegos'%}">Todos los Juegos</a></li>
                 <li><a href = ""> Todas las marcas </a></li>
             </ul>
         {% endblock %}

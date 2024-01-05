@@ -44,3 +44,12 @@ V) catalogo/Marca/<id> — La vista detallada para la marca específica con un c
 5.1.2) configuramos para que django lo vea al template
 
 ////////////////////// 68e4b87 commit ---- Creacion del Index -----------------/////
+
+6)  Listas genéricas y vistas de detalle
+
+6.1) registramos la view de la pagina que queremos crear (juegos)
+6.2) registramos la url
+6.3) creamos una listview de juego para poder iterar con su html pero falta la dependencia de ver las cosas!
+6.4) iremos con el Detailview 
+
+////////////////////////////// commit -- LIST/DETAIL VIEW WORKING /////////////////////////////
