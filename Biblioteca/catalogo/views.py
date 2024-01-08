@@ -26,16 +26,20 @@ from django.views import generic
 
 class JuegoListView(generic.ListView):
     model = Juego
-    context_object_name = "juego_list"
-    queryset = Juego.objects.filter(titulo__icontains = 'age')[:5] #consigue los 5 juegos que el titulo contenga 'age'
     template_name = 'juegos_list.html'
+    paginate_by = 5
 
-    def get_context_data(self, **kwargs):
-        # Llame primero a la implementación base para obtener un contexto.
-        context = super(JuegoListView, self).get_context_data(**kwargs)
-        # Obtenga el blog del id y agréguelo al contexto.
-        context['juego_list'] = Juego.objects.all()
-        return context
     
 class JuegoDetailView(generic.DetailView):
     model = Juego
+
+
+class MarcaListView(generic.ListView):
+    model = Marca
+    template_name = 'base_generic.html'
+class GeneroListView(generic.ListView):
+    model = Genero
+    
+
+class MarcaDetailView(generic.DetailView):
+    model = Marca
